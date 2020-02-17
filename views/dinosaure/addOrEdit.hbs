@@ -1,0 +1,31 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/dinosaure" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{dinosaure._id}}">
+    <div class="form-group">
+        <label>Age</label>
+        <input type="text" class="form-control" name="Age" placeholder="Age" value="{{dinosaure.Age}}">
+        <div class="text-danger">
+            {{dinosaure.AgeError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Famille</label>
+        <input type="text" class="form-control" name="Famille" placeholder="Famille" value="{{dinosaure.Famille}}">
+        <div class="text-danger">
+            {{dinosaure.FamilleError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Race</label>
+            <input type="text" class="form-control" name="Race" placeholder="Race" value="{{dinosaure.Race}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>Nourriture</label>
+            <input type="text" class="form-control" name="Nourriture" placeholder="Nourriture" value="{{dinosaure.Nourriture}}">
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/dinosaure/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

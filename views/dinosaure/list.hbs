@@ -1,0 +1,26 @@
+<h3><a class="btn btn-secondary" href="/dinosaure"><i class="fa fa-plus"></i> Create New</a> dinosaure List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Age</th>
+            <th>Famille</th>
+            <th>Race</th>
+            <th>Nourriture</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Age}}</td>
+            <td>{{this.Famille}}</td>
+            <td>{{this.Race}}</td>
+            <td>{{this.Nourriture}}</td>
+            <td>
+                <a href="/dinosaure/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/dinosaure/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
